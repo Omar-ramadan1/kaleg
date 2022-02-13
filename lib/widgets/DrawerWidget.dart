@@ -1,0 +1,86 @@
+import 'package:flutter/material.dart';
+import 'package:kleg/widgets/tapsofDrawer.dart';
+
+class Drawer_Widget extends StatefulWidget {
+  const Drawer_Widget({Key? key}) : super(key: key);
+
+  @override
+  _Drawer_WidgetState createState() => _Drawer_WidgetState();
+}
+
+// ignore: camel_case_types
+class _Drawer_WidgetState extends State<Drawer_Widget> {
+  bool _value = false;
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      backgroundColor: Colors.amber,
+      child: Column(
+        children: <Widget>[
+          Container(
+            height: MediaQuery.of(context).size.height,
+            color: Colors.amber,
+            child: Column(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(top: 90, bottom: 120),
+                  decoration: BoxDecoration(
+                    color: Color(0xFFBD954F),
+                    borderRadius: BorderRadius.all(Radius.circular(60)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.6),
+                        spreadRadius: 3,
+                        blurRadius: 9,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                      
+                    ],
+                  ),
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        radius: MediaQuery.of(context).size.width / 9,
+                        backgroundColor: Colors.white,
+                        child: Icon(
+                          Icons.person,
+                          size: 40,
+                          color: Color(0xFFBD954F),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                DrawerTabsWidget(
+                  Icons.settings,
+                  "الاعدادات",
+                  () {},
+                ),
+                //   DrawerTabsWidget(Icons.connect_without_contact,"الاتصال",(){},),
+               
+                SwitchListTile(
+                    value: _value,
+                    onChanged: (value) {
+                      setState(() {
+                        _value = value;
+                      });
+                    },
+                    activeColor: Colors.green,
+                    activeTrackColor: Colors.white,
+                    title: Container(
+                      margin: EdgeInsets.only(left: 110),
+                      child: Text("الاتصال",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),)),
+                    ),
+                     DrawerTabsWidget(
+                  Icons.logout,
+                  " تسجيل الخروج",
+                  () {},
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
