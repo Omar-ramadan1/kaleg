@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, use_key_in_widget_constructors, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:kleg/screens/DetailsOfHome.dart';
@@ -16,7 +18,7 @@ class HomeScreen extends StatelessWidget {
               ),
             );
           },
-          child: Container(
+          child: SizedBox(
             height: 100,
             child: Card(
               margin: EdgeInsets.symmetric(horizontal: 5, vertical: 14),
@@ -36,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       Spacer(),
                       Column(
-                        children: [
+                        children: const [
                           Text("112"),
                                                     SizedBox(height: 10,),
 

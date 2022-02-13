@@ -17,12 +17,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home:LoginPage(),
+      home:const DetailsOfHome(),
       routes: {
         LoginPage.routename:(ctx)=>LoginPage(),
-        TapScreen.routename:(ctx)=>TapScreen(),
-        DetailsOfHome.routename:(ctx)=>DetailsOfHome(),
-        updateItem.routename:(ctx)=>updateItem(),
+        TapScreen.routename:(ctx)=>const TapScreen(),
+        DetailsOfHome.routeName:(ctx)=>const DetailsOfHome(),
+        updateItem.routename:(ctx)=>const updateItem(),
 
       },
     );

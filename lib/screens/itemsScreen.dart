@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:kleg/screens/updateItem.dart';
 
@@ -9,12 +11,12 @@ class ItemScreen extends StatelessWidget {
     return Scaffold(
         body: ListView(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: const [
             Text(
               "1",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -30,7 +32,7 @@ class ItemScreen extends StatelessWidget {
              Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => updateItem(),
+                                  builder: (context) => const updateItem(),
                                 ),
                               );
           },
@@ -39,7 +41,7 @@ class ItemScreen extends StatelessWidget {
               decoration: BoxDecoration(
                   color: Colors.amber,
                   border: Border.all(color: Colors.amber),
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(15),
                     topRight: Radius.circular(15),
                     bottomLeft: Radius.circular(15),
@@ -49,7 +51,7 @@ class ItemScreen extends StatelessWidget {
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Text(
                         "اسرتي كورن فليكس",
                         style:
@@ -62,13 +64,13 @@ class ItemScreen extends StatelessWidget {
                     children: [
                       Column(
                         children: [
-                          Text(
+                          const Text(
                             "المخزون",
                             style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.bold),
                           ),
                           Row(
-                            children: [
+                            children: const [
                               Text(
                                 "4545",
                                 style: TextStyle(
@@ -83,7 +85,7 @@ class ItemScreen extends StatelessWidget {
                         ],
                       ),
                       Column(
-                        children: [
+                        children: const [
                           Text(
                             "السعر",
                             style: TextStyle(
@@ -101,20 +103,20 @@ class ItemScreen extends StatelessWidget {
                           Row(
                             children: [
                               Container(
-                                  margin: EdgeInsets.only(right: 13),
-                                  child: Text(
+                                  margin: const EdgeInsets.only(right: 13),
+                                  child: const Text(
                                     "رقم الصنف",
                                     style: TextStyle(
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold),
                                   )),
-                              CircleAvatar(
+                              const CircleAvatar(
                                 radius: 10,
                                 backgroundColor: Colors.green,
                               ),
                             ],
                           ),
-                          Text(
+                          const Text(
                             "4545",
                             style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.bold),
@@ -123,14 +125,14 @@ class ItemScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Column(
-                        children: [
+                        children: const [
                           Text("الكميه",style: TextStyle(fontSize: 25),),
                           Text("50",style: TextStyle(fontSize: 25),),
         
@@ -138,16 +140,16 @@ class ItemScreen extends StatelessWidget {
                       ),
                       Column(
                         children: [
-                          Text("الوحده",style: TextStyle(fontSize: 25),),
-                          Container(
+                          const Text("الوحده",style: TextStyle(fontSize: 25),),
+                          SizedBox(
                             width: 100,
                             height: 50,
                             child: TextFormField(
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                 filled: true,
                                 fillColor: Colors.white,
                                 border: OutlineInputBorder(
-                                  borderSide: BorderSide(
+                                  borderSide:  BorderSide(
                                     color: Colors.white,
                                     //width: 5
                                   ),

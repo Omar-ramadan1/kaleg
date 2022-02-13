@@ -1,11 +1,12 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:kleg/screens/SearchScreen.dart';
 import 'package:kleg/screens/itemsScreen.dart';
 import 'package:kleg/screens/receiptScreen.dart';
-import 'package:kleg/widgets/AppBarWidget.dart';
 
 class DetailsOfHome extends StatelessWidget {
-    static const routename = '/DetailsofHome';
+    static const routeName = '/DetailsOfHome';
 
   const DetailsOfHome({Key? key}) : super(key: key);
 
@@ -16,13 +17,14 @@ class DetailsOfHome extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.amber,
-          bottom: TabBar(
+          bottom: const TabBar(
+            labelStyle: TextStyle(fontSize: 20 , fontWeight: FontWeight.w900),
             tabs: [
               Tab(
                 text: "الاصناف",
               ),
               Tab(
-                text: "بحث ",
+                text: "بحث",
               ),
               Tab(
                 text: "الفاتوره",
@@ -30,7 +32,7 @@ class DetailsOfHome extends StatelessWidget {
             ],
           ),
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [
             ItemScreen(),
             SearchScreen(),

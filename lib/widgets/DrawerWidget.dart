@@ -1,15 +1,17 @@
+// ignore_for_file: file_names, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:kleg/widgets/tapsofDrawer.dart';
 
-class Drawer_Widget extends StatefulWidget {
-  const Drawer_Widget({Key? key}) : super(key: key);
+class DrawerWidget extends StatefulWidget {
+  const DrawerWidget({Key? key}) : super(key: key);
 
   @override
-  _Drawer_WidgetState createState() => _Drawer_WidgetState();
+  _DrawerWidgetState createState() => _DrawerWidgetState();
 }
 
 // ignore: camel_case_types
-class _Drawer_WidgetState extends State<Drawer_Widget> {
+class _DrawerWidgetState extends State<DrawerWidget> {
   bool _value = false;
   @override
   Widget build(BuildContext context) {

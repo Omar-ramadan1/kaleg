@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, camel_case_types, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class updateItem extends StatefulWidget {
@@ -23,7 +25,7 @@ class _updateItemState extends State<updateItem> {
           SizedBox(
             height: 250,
           ),
-          Container(
+          SizedBox(
               width: MediaQuery.of(context).size.width / 1,
               height: 50,
               child: Directionality(

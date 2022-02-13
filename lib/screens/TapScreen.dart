@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:kleg/screens/HomeScreen.dart';
 import 'package:kleg/screens/operationScreen.dart';
@@ -14,7 +16,7 @@ class TapScreen extends StatefulWidget {
 }
 
 class _TapScreenState extends State<TapScreen> {
-  final List<Widget> _pages = [OperationScreen(),HomeScreen()];
+  final List<Widget> _pages = [const OperationScreen(),HomeScreen()];
   int _selectedPageIndex = 0;
 
   
@@ -23,8 +25,8 @@ class _TapScreenState extends State<TapScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: Appbar_widget(),
-      endDrawer: Drawer_Widget(),
+      appBar: AppbarWidget(),
+      endDrawer: DrawerWidget(),
       body: _pages[_selectedPageIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedPageIndex,
@@ -38,7 +40,6 @@ class _TapScreenState extends State<TapScreen> {
         unselectedItemColor: Colors.white,
         type: BottomNavigationBarType.fixed,
         items: [
-       
           BottomNavigationBarItem(
             backgroundColor: Colors.amber,
             icon: Icon(
