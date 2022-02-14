@@ -14,8 +14,18 @@ class updateItem extends StatefulWidget {
 }
 
 class _updateItemState extends State<updateItem> {
+
+  List<String> items = ["حبه", "كرتون", "باكت"];
   String? value;
-  final items = ["حبه", "كرتون", "باكت"];
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    setState(() {
+      value = items[0];
+    });
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

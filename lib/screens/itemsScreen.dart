@@ -28,13 +28,13 @@ class ItemScreen extends StatelessWidget {
           ],
         ),
         InkWell(
-          onTap: (){
-             Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const updateItem(),
-                                ),
-                              );
+          onTap: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const updateItem(),
+              ),
+            );
           },
           child: Container(
               height: MediaQuery.of(context).size.height / 2.8,
@@ -54,8 +54,8 @@ class ItemScreen extends StatelessWidget {
                     children: const [
                       Text(
                         "اسرتي كورن فليكس",
-                        style:
-                            TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
                       )
                     ],
                   ),
@@ -133,40 +133,43 @@ class ItemScreen extends StatelessWidget {
                     children: [
                       Column(
                         children: const [
-                          Text("الكميه",style: TextStyle(fontSize: 25),),
-                          Text("50",style: TextStyle(fontSize: 25),),
-        
+                          Text(
+                            "الكميه",
+                            style: TextStyle(fontSize: 25),
+                          ),
+                          Text(
+                            "50",
+                            style: TextStyle(fontSize: 25),
+                          ),
                         ],
                       ),
                       Column(
                         children: [
-                          const Text("الوحده",style: TextStyle(fontSize: 25),),
+                          const Text(
+                            "الوحده",
+                            style: TextStyle(fontSize: 25),
+                          ),
                           SizedBox(
-                            width: 100,
-                            height: 50,
-                            child: TextFormField(
-                              decoration: const InputDecoration(
-                                filled: true,
-                                fillColor: Colors.white,
-                                border: OutlineInputBorder(
-                                  borderSide:  BorderSide(
-                                    color: Colors.white,
-                                    //width: 5
-                                  ),
-                                  
-                                ),
-                                disabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Colors.white,
-                                    //width: 5
-                                  )
-                                )
-                              ),
-                              
-                            ))
+                              width: 100,
+                              height: 50,
+                              child: TextFormField(
+                                decoration: const InputDecoration(
+                                    filled: true,
+                                    fillColor: Colors.white,
+                                    border: OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: Colors.white,
+                                        //width: 5
+                                      ),
+                                    ),
+                                    disabledBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                      color: Colors.white,
+                                      //width: 5
+                                    ))),
+                              ))
                         ],
                       ),
-        
                     ],
                   )
                 ],
