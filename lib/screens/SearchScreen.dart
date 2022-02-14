@@ -10,10 +10,10 @@ class SearchScreen extends StatelessWidget {
     return Scaffold(
       body: ListView(children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
               Container(
-                  margin: EdgeInsets.only(top: 10),
+                  margin: EdgeInsets.only(top: 10,right: 20),
                   width: 70,
                   height: 50,
                   decoration: BoxDecoration(

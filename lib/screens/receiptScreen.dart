@@ -51,7 +51,7 @@ class _ReceiptScreenState extends State<ReceiptScreen> {
                 ],
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
                       width: 100,
@@ -72,7 +72,7 @@ class _ReceiptScreenState extends State<ReceiptScreen> {
                     textDirection: TextDirection.rtl,
                     child: Container(
                         height: 50,
-                        width: 300,
+                        width: 250,
                         child: TextFormField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
@@ -90,7 +90,7 @@ class _ReceiptScreenState extends State<ReceiptScreen> {
                 ],
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Container(
                       width: 100,
@@ -111,7 +111,7 @@ class _ReceiptScreenState extends State<ReceiptScreen> {
                     textDirection: TextDirection.rtl,
                     child: Container(
                         height: 50,
-                        width: 300,
+                        width: 250,
                         child: TextFormField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
@@ -131,9 +131,12 @@ class _ReceiptScreenState extends State<ReceiptScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(
-                    "بيانات العميل",
-                    style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
+                  Container(
+                    margin: EdgeInsets.only(right: 8),
+                    child: Text(
+                      "بيانات العميل",
+                      style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
+                    ),
                   )
                 ],
               ),
@@ -180,7 +183,7 @@ class _ReceiptScreenState extends State<ReceiptScreen> {
                 children: [
                   Text(
                     "اضافه",
-                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   )
                 ],
               ),
