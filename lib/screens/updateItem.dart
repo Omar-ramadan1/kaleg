@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../widgets/buttonwidget.dart';
+
 class updateItem extends StatefulWidget {
   static const routename = '/updateItem';
 
@@ -12,53 +14,98 @@ class updateItem extends StatefulWidget {
 }
 
 class _updateItemState extends State<updateItem> {
-  String valuechoose = "";
-  List listitem = ["item1", "item2", "item3"];
+  String? value;
+  final items = ["حبه", "كرتون", "باكت"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
       ),
-      body: Column(
+      body: Stack(
         children: [
-          SizedBox(
-            height: 250,
-          ),
-          SizedBox(
-              width: MediaQuery.of(context).size.width / 1,
-              height: 50,
-              child: Directionality(
+          Column(
+            children: [
+              SizedBox(
+                height: 250,
+              ),
+                Directionality(
                 textDirection: TextDirection.rtl,
-                child: TextFormField(
-                  decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.white,
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.white,
-                          //width: 5
-                        ),
-                      ),
-                      disabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                        color: Colors.white,
-                        //width: 5
-                      ))),
+                child: Container(
+                  decoration: BoxDecoration(
+                    
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: Colors.white,width: 4)
+                  ),
+                  child: DropdownButton<String>(
+                    value: value,
+                    isExpanded: true,
+                    items: items.map(buildmenuItem).toList(),
+                    onChanged: (value) {
+                      setState(() {
+                        this.value = value;
+                      });
+                    },
+                  ),
                 ),
-              )),
-        
-          
+              ),
+              
+              SizedBox(
+                  width: MediaQuery.of(context).size.width / 1,
+                  height: 50,
+                  child: Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: Container(
+                      decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: Colors.white,width: 4)
+                      ),
+                      child: TextFormField(
+                        
+                        decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.white,
+                                //width: 5
+                              ),
+                            ),
+                            hintText: "40" ,
+                            disabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                              color: Colors.white,
+                              //width: 5
+                            ))),
+                      ),
+                    ),
+                  )
+                  ),
+                  SizedBox(height: 20,),
+            
+            ],
+          ),
+                  Positioned(
+          bottom: 0,
+          child: Button_Widget(
+              "تعديل",
+              MediaQuery.of(context).size.width
+              //100
+              ,
+              75,
+              Colors.orange, () {
+            
+          }),
+        ),
         ],
       ),
     );
   }
 
-  DropdownMenuItem<String> buildmenuItem(String item) =>
-      DropdownMenuItem(
-        value: item,
-        child: Text(item,
-        style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
-      
+  DropdownMenuItem<String> buildmenuItem(String item) => DropdownMenuItem(
+      value: item,
+      child: Text(
+        item,
+        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
       ));
 }

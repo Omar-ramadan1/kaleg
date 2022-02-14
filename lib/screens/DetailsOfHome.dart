@@ -32,7 +32,7 @@ class DetailsOfHome extends StatelessWidget {
             ],
           ),
         ),
-        body: const TabBarView(
+        body:  TabBarView(
           children: [
             ItemScreen(),
             SearchScreen(),
