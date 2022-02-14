@@ -16,7 +16,7 @@ class TapScreen extends StatefulWidget {
 }
 
 class _TapScreenState extends State<TapScreen> {
-  final List<Widget> _pages = [const OperationScreen(),HomeScreen()];
+  final List<Widget> _pages = [ OperationScreen(),HomeScreen()];
   int _selectedPageIndex = 0;
 
   
