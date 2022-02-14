@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../widgets/buttonwidget.dart';
-import '../widgets/receiptScreenWidgets/ClientInfoWidget.dart';
 import '../widgets/receiptScreenWidgets/TextFieldWidget.dart';
 import '../widgets/receiptScreenWidgets/DatesWidget.dart';
 import '../widgets/receiptScreenWidgets/HeadLines.dart';
