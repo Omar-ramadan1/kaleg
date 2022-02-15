@@ -11,6 +11,14 @@ class AppbarWidget extends StatelessWidget with PreferredSizeWidget {
       iconTheme: IconThemeData(color: Colors.grey, size: 40),
       backgroundColor: Colors.transparent,
       shadowColor: Colors.transparent.withOpacity(0.05),
+      title: Container(
+       
+        child: Container(
+           margin: EdgeInsets.only(left: 120),
+           width: 150,
+
+          child: Image.asset("assets/images/ktaf.png"))
+        ),
     );
   }
 
@@ -19,3 +27,4 @@ class AppbarWidget extends StatelessWidget with PreferredSizeWidget {
 
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }
+

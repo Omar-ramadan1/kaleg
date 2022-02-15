@@ -11,17 +11,24 @@ class HomeScreen extends StatelessWidget {
       body: ListView(children: [
         InkWell(
           onTap: () {
-            Navigator.pushReplacement(
+            Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (context) => DetailsOfHome(),
               ),
             );
           },
-          child: SizedBox(
-            height: 100,
+          child: Container(
+            margin: EdgeInsets.only(top: 10),
             child: Card(
-              margin: EdgeInsets.symmetric(horizontal: 5, vertical: 14),
+              shape: BeveledRectangleBorder(
+                
+                side:   BorderSide(
+                  
+                  color: Colors.amber,
+                  width: 2.0
+                )
+              ),
               child: Padding(
                   padding: EdgeInsets.all(8),
                   child: Row(
@@ -29,22 +36,23 @@ class HomeScreen extends StatelessWidget {
                       Column(
                         children: [
                           Text(
-                            DateFormat("yyyy-MM-dd").format(DateTime.now()),
-                            style: TextStyle(fontSize: 15),
+                            DateFormat("yyyy-MM-dd").format(DateTime.now(),),
+                            style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),
                           ),
                           SizedBox(height: 10,),
-                          Text("فاتوره مشتريات"),
+                          Text("فاتوره مشتريات",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
                         ],
                       ),
+                      
                       Spacer(),
                       Column(
                         children: const [
-                          Text("112"),
+                          Text("112",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
                                                     SizedBox(height: 10,),
 
                           Text(
                             "شركه كيف الشيوخ",
-                            style: TextStyle(fontSize: 15),
+                            style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
                           ),
                         ],
                       )

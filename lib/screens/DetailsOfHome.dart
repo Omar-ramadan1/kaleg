@@ -31,6 +31,10 @@ class DetailsOfHome extends StatelessWidget {
               ),
             ],
           ),
+              title: Container(
+            margin: EdgeInsets.only(left: 70),
+            width: 150,
+            child: Image.asset("assets/images/ktaf.png")),
         ),
         body:  TabBarView(
           children: [
