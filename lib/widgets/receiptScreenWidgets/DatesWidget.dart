@@ -1,12 +1,18 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 
 class DatesWidget extends StatelessWidget {
+  final Function(int index) showDatePicker;
+  final String date;
+  final int index;
+  const DatesWidget(this.date ,this.showDatePicker,this.index);
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Column(
       children: [
-
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -19,7 +25,7 @@ class DatesWidget extends StatelessWidget {
                   border: Border.all(color: Colors.white, width: 4),
                 ),
                 child: MaterialButton(
-                  onPressed: () {  },
+                  onPressed: ()=> showDatePicker(index),
                   child: Container(
                       margin: const EdgeInsets.only(top: 5),
                       child: const Center(
@@ -39,7 +45,7 @@ class DatesWidget extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                         borderSide: BorderSide.none),
                     filled: true,
-                    hintText: "2022-3-15",
+                    hintText: date,
                     hintStyle: const TextStyle(
                       fontSize: 18,
                     ),

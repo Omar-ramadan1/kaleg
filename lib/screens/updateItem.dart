@@ -1,8 +1,7 @@
 // ignore_for_file: file_names, camel_case_types, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-
-import '../widgets/buttonwidget.dart';
+import 'package:kleg/widgets/GlobalWidget/buttonwidget.dart';
 
 class updateItem extends StatefulWidget {
   static const routename = '/updateItem';
@@ -14,7 +13,6 @@ class updateItem extends StatefulWidget {
 }
 
 class _updateItemState extends State<updateItem> {
-
   List<String> items = ["حبه", "كرتون", "باكت"];
   String? value;
   @override
@@ -24,8 +22,8 @@ class _updateItemState extends State<updateItem> {
     setState(() {
       value = items[0];
     });
-
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,14 +37,12 @@ class _updateItemState extends State<updateItem> {
               SizedBox(
                 height: 250,
               ),
-                Directionality(
+              Directionality(
                 textDirection: TextDirection.rtl,
                 child: Container(
                   decoration: BoxDecoration(
-                    
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: Colors.white,width: 4)
-                  ),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: Colors.white, width: 4)),
                   child: DropdownButton<String>(
                     value: value,
                     isExpanded: true,
@@ -59,7 +55,6 @@ class _updateItemState extends State<updateItem> {
                   ),
                 ),
               ),
-              
               SizedBox(
                   width: MediaQuery.of(context).size.width / 1,
                   height: 50,
@@ -67,11 +62,9 @@ class _updateItemState extends State<updateItem> {
                     textDirection: TextDirection.rtl,
                     child: Container(
                       decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: Colors.white,width: 4)
-                      ),
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: Colors.white, width: 4)),
                       child: TextFormField(
-                        
                         decoration: InputDecoration(
                             filled: true,
                             fillColor: Colors.white,
@@ -81,7 +74,7 @@ class _updateItemState extends State<updateItem> {
                                 //width: 5
                               ),
                             ),
-                            hintText: "40" ,
+                            hintText: "40",
                             disabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
                               color: Colors.white,
@@ -89,24 +82,17 @@ class _updateItemState extends State<updateItem> {
                             ))),
                       ),
                     ),
-                  )
-                  ),
-                  SizedBox(height: 20,),
-            
+                  )),
+              SizedBox(
+                height: 20,
+              ),
             ],
           ),
-                  Positioned(
-          bottom: 0,
-          child: Button_Widget(
-              "تعديل",
-              MediaQuery.of(context).size.width
-              //100
-              ,
-              75,
-              Colors.orange, () {
-            
-          }),
-        ),
+          Positioned(
+            bottom: 0,
+            child: Button_Widget("تعديل", MediaQuery.of(context).size.width, 75,
+                Colors.orange, () {}),
+          ),
         ],
       ),
     );

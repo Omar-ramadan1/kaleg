@@ -3,9 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:kleg/screens/HomeScreen.dart';
 import 'package:kleg/screens/operationScreen.dart';
-import 'package:kleg/widgets/DrawerWidget.dart';
+import 'package:kleg/widgets/GlobalWidget/DrawerWidget.dart';
 
-import '../widgets/AppBarWidget.dart';
+import '../widgets/GlobalWidget/AppBarWidget.dart';
 
 class TapScreen extends StatefulWidget {
   static const routename = '/TapScreen';

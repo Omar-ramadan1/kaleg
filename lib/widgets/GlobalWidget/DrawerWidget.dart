@@ -1,7 +1,7 @@
 // ignore_for_file: file_names, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:kleg/widgets/tapsofDrawer.dart';
+import 'package:kleg/widgets/GlobalWidget/tapsofDrawer.dart';
 
 class DrawerWidget extends StatefulWidget {
   const DrawerWidget({Key? key}) : super(key: key);
@@ -36,7 +36,6 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                         blurRadius: 9,
                         offset: Offset(0, 3), // changes position of shadow
                       ),
-                      
                     ],
                   ),
                   child: Column(
@@ -53,31 +52,27 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                     ],
                   ),
                 ),
-                DrawerTabsWidget(
-                  Icons.settings,
-                  "الاعدادات",
-                  () {},
-                ),
+                DrawerTabsWidget(Icons.settings, "الاعدادات", () {}),
                 //   DrawerTabsWidget(Icons.connect_without_contact,"الاتصال",(){},),
-               
+
                 SwitchListTile(
-                    value: _value,
-                    onChanged: (value) {
-                      setState(() {
-                        _value = value;
-                      });
-                    },
-                    activeColor: Colors.green,
-                    activeTrackColor: Colors.white,
-                    title: Container(
+                  value: _value,
+                  onChanged: (value) {
+                    setState(() {
+                      _value = value;
+                    });
+                  },
+                  activeColor: Colors.green,
+                  activeTrackColor: Colors.white,
+                  title: Container(
                       margin: EdgeInsets.only(left: 110),
-                      child: Text("الاتصال",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),)),
-                    ),
-                     DrawerTabsWidget(
-                  Icons.logout,
-                  " تسجيل الخروج",
-                  () {},
+                      child: Text(
+                        "الاتصال",
+                        style: TextStyle(
+                            fontSize: 25, fontWeight: FontWeight.bold),
+                      )),
                 ),
+                DrawerTabsWidget(Icons.logout, " تسجيل الخروج", () {}),
               ],
             ),
           )

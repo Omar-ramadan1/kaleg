@@ -2,11 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:kleg/StateDependentClasses/ReceiptStateClass.dart';
+import 'package:kleg/widgets/GlobalWidget/buttonwidget.dart';
+import 'package:kleg/widgets/receiptScreenWidgets/DatesWidget.dart';
+import 'package:kleg/widgets/receiptScreenWidgets/HeadLines.dart';
+import 'package:kleg/widgets/receiptScreenWidgets/TextFieldWidget.dart';
 
-import '../widgets/buttonwidget.dart';
-import '../widgets/receiptScreenWidgets/TextFieldWidget.dart';
-import '../widgets/receiptScreenWidgets/DatesWidget.dart';
-import '../widgets/receiptScreenWidgets/HeadLines.dart';
+
 
 class ReceiptScreen extends StatefulWidget {
   @override
@@ -14,6 +16,14 @@ class ReceiptScreen extends StatefulWidget {
 }
 
 class _ReceiptScreenState extends State<ReceiptScreen> {
+  late ReceiptStateClass receiptStateClass;
+   List<String> dates = [DateTime.now().toIso8601String().substring(0 , 10) , DateTime.now().toIso8601String().substring(0 , 10)];
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    receiptStateClass = ReceiptStateClass(this);
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,8 +36,8 @@ class _ReceiptScreenState extends State<ReceiptScreen> {
               children: [
                 TextFieldWidget("الرقم المرجعي"),
                 Headlines("التواريخ"),
-                DatesWidget(),
-                DatesWidget(),
+                for(int i = 0 ; i < dates.length ; i++)
+                DatesWidget(dates[i] ,receiptStateClass.showDatePicker , i),
                 Headlines("بيانات العميل"),
                 TextFieldWidget("رقم العميل"),
                 TextFieldWidget("اسم العميل"),
