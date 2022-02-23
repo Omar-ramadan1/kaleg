@@ -1,10 +1,8 @@
 // ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 import 'package:kleg/screens/HomeScreen.dart';
 import 'package:kleg/screens/operationScreen.dart';
 import 'package:kleg/widgets/GlobalWidget/DrawerWidget.dart';
-
 import '../widgets/GlobalWidget/AppBarWidget.dart';
 
 class TapScreen extends StatefulWidget {

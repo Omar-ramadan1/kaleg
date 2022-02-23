@@ -4,7 +4,7 @@ import '../widgets/GlobalWidget/buttonwidget.dart';
 import '../widgets/barcodewidgets/textfieldwidget.dart';
 
 class BarCodeScreen extends StatelessWidget {
-    static const routeName = '/BarCodeScreen';
+  static const routeName = '/BarCodeScreen';
 
   @override
   Widget build(BuildContext context) {
@@ -16,36 +16,27 @@ class BarCodeScreen extends StatelessWidget {
         children: [
           ListView(
             children: [
-             TextFeildWidget("بحث باركود"),
-    
-             TextFeildWidget("1"),
-
-             TextFeildWidget("اسم الصنف"),
-
-               TextFeildWidget("الوحده"),
-
+              TextFeildWidget("بحث باركود"),
+              TextFeildWidget("1"),
+              TextFeildWidget("اسم الصنف"),
+              TextFeildWidget("الوحده"),
               TextFeildWidget("السعر"),
-
-                TextFeildWidget("عنوان الطابعه"),
-
+              TextFeildWidget("عنوان الطابعه"),
             ],
           ),
-            Positioned(
-          bottom: 0,
-          child: Button_Widget(
-              "اقتران",
-              MediaQuery.of(context).size.width
-              //100
-              ,
-              75,
-              Colors.green, () {
-            
-          }),
-        ),
+          Positioned(
+            bottom: 0,
+            child: Button_Widget(
+                "اقتران",
+                MediaQuery.of(context).size.width
+                //100
+                ,
+                75,
+                Colors.green,
+                () {}),
+          ),
         ],
       ),
-
-      
     );
   }
 }
